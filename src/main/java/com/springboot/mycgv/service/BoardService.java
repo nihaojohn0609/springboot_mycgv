@@ -24,4 +24,16 @@ public class BoardService {
     public int insert(BoardDto boardDto) {
         return boardMapper.insert(boardDto);
     }
+
+    public int update(BoardDto boardDto) {
+        return boardMapper.update(boardDto);
+    }
+
+    public String getBsfile(String bid) {
+        return boardMapper.getBsfile(bid);
+    }
+
+    public int delete(String bid) {
+        return boardMapper.delete(bid);
+    }
 }

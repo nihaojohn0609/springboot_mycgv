@@ -28,7 +28,7 @@ public class FileUploadService {
         return boardDto;
     }
 
-
+    // fileSave 기능 - 파일이 존재하면 서버에 저장하는 메소드
     public void fileSave(BoardDto boardDto) throws Exception {
         //파일의 저장위치
        String projectPath = System.getProperty("user.dir") + "\\src\\main\\resources\\static\\upload\\";
@@ -37,8 +37,18 @@ public class FileUploadService {
         //파일이 존재하면 서버에 저장
         if(boardDto.getFile1().getOriginalFilename() != null
                 && !boardDto.getFile1().getOriginalFilename().equals("")) {
-            File saveFile = new File(projectPath+ boardDto.getBsfile());
+            File saveFile = new File(projectPath + boardDto.getBsfile());
             boardDto.getFile1().transferTo(saveFile);
+        }
+    }
+
+    // fileDelete
+    public void fileDelete(String oldBsFile) throws Exception {
+        // 파일의 저장위치
+        String projectPath = System.getProperty("user.dir") + "\\src\\main\\resources\\static\\upload\\";
+        File deleteFile = new File(projectPath + oldBsFile);
+        if(deleteFile.exists()) {
+            deleteFile.delete();
         }
     }
 }
