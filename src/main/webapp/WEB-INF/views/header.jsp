@@ -31,15 +31,15 @@
 					<ul>
 						<li><a href="#" style="width:150px">[ ${sessionScope.svo.name} ]님!! 반갑습니다~</a></li>
 						<li><a href="http://localhost:9000/logout">로그아웃</a></li>
-						<li><a href="http://localhost:9000/join/join.jsp" target="_parent">회원가입</a></li>
+<%--						<li><a href="http://localhost:9000/join/join.jsp" target="_parent">회원가입</a></li>--%>
 						<li><a href="http://localhost:9000/mypage">마이페이지</a></li>
 						<li><a href="#">VIP</a></li>
 						<li><a href="#">고객센터</a></li>
-						<li><a href="http://localhost:9000/notice_list">공지사항</a></li>
-						<li><a href="http://localhost:9000/board_list">게시판</a></li>
+						<li><a href="http://localhost:9000/notice_list/1/">공지사항</a></li>
+						<li><a href="http://localhost:9000/board_list/1/">게시판</a></li>
 						<li><a href="http://localhost:9000/board_list_json">게시판(JSON)</a></li>
 						<c:if test="${sessionScope.svo.id == 'admin'}">
-							<li><a href="http://localhost:9000/admin_index">ADMIN</a></li>
+							<li><a href="http://localhost:9000/admin/index">ADMIN</a></li>
 						</c:if>					
 					</ul>
 				</c:otherwise>

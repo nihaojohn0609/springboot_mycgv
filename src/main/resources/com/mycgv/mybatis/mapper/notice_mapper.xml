@@ -20,11 +20,11 @@
 <!--			where nid=#{nid}-->
 <!--	</update>-->
 
-<!--	<select id="list2" resultType="com.mycgv_jsp.vo.NoticeVo">-->
-<!--		select rownum rno, nid, ntitle,nhits, to_char(ndate,'yyyy-mm-dd') ndate -->
-<!--		from (select nid, ntitle, nhits, ndate from mycgv_notice -->
-<!--				order by ndate desc)-->
-<!--	</select>-->
+	<select id="admin_list" resultType="com.mycgv_jsp.vo.NoticeVo">
+		select rownum rno, nid, ntitle,nhits, to_char(ndate,'yyyy-mm-dd') ndate
+		from (select nid, ntitle, nhits, ndate from mycgv_notice
+				order by ndate desc)
+	</select>
 
 <!--	<insert id="insert" parameterType="com.mycgv_jsp.vo.NoticeVo">-->
 <!--		insert into -->
