@@ -20,7 +20,7 @@
 <!--			where nid=#{nid}-->
 <!--	</update>-->
 
-	<select id="admin_list" resultType="com.mycgv_jsp.vo.NoticeVo">
+	<select id="admin_list" resultType="com.springboot.mycgv.dto.NoticeDto">
 		select rownum rno, nid, ntitle,nhits, to_char(ndate,'yyyy-mm-dd') ndate
 		from (select nid, ntitle, nhits, ndate from mycgv_notice
 				order by ndate desc)

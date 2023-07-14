@@ -23,7 +23,7 @@
 	<!-- content -->
 	<div class="content">
 		<section class="board">
-			<h1 class="title">게시판</h1>			
+			<h1 class="title">게시판(JSON)</h1>
 		</section>
 	</div>
 	

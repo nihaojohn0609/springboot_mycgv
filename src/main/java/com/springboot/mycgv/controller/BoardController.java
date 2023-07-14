@@ -31,6 +31,11 @@ public class BoardController {
         return "/board/board_list";
     }
 
+    @GetMapping("board_list_json")
+    public String board_list_json() {
+        return "/board/board_list_json";
+    }
+
     @GetMapping("board_content/{bid}/{page}")
     public String board_content(@PathVariable String bid, @PathVariable String page, Model model) {
         model.addAttribute("board", boardService.content(bid));
@@ -92,7 +97,7 @@ public class BoardController {
         String oldBsFile = boardService.getBsfile(boardDto.getBid());
         int result = boardService.delete(boardDto.getBid());
         if(result == 1) {
-            if(oldBsFile == null) { // String이므로  equals 사용하면 안된다!
+            if(oldBsFile == null) { // String 객체이므로  equals 사용하면 안된다!
                 fileUploadService.fileDelete(oldBsFile);
             }
         }

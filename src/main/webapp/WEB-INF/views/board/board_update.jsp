@@ -89,7 +89,7 @@
 							<button type="reset" class="btn_style">다시쓰기</button>
 							<a href="/board_content/${board.bid}/${page}/">
 								<button type="button" class="btn_style">이전페이지</button></a>
-							<a href="board_list.do">
+							<a href="/board_list/${page}/">
 								<button type="button" class="btn_style">리스트</button></a>							
 						</td>				
 					</tr>
